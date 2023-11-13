@@ -3,56 +3,115 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
-#header{
-    min-height: 100vh;
-   
-    width: 100%;
-    background-image: url("images/backg.jpg");
-    background-size: cover;
-    background-position: center;
-    position: relative;
+body{
+    background: #FAFAF7;
+    
+    
 }
+/* ------------------navbar-------------------- */
 
-nav{
+.navbar {
+    background-color: #ffff;
+    border: none;
+    border-radius: 0;
+  }
+
+  .navbar-inverse .navbar-brand {
+    color: #105C31;
+  }
+
+  .navbar-inverse .navbar-nav > li > a {
+    color: #105C31;
+  }
+
+  .navbar-inverse .navbar-nav > li.active > a,
+  .navbar-inverse .navbar-nav > li > a:hover,
+  .navbar-inverse .navbar-nav > li > a:focus {
+    background-color: #105C31;
+    color: #ffffff;
+  }
+
+  .navbar-inverse .navbar-toggle {
+    border-color: #000; /* Menu button border color */
+  }
+
+  .navbar-inverse .navbar-toggle:hover,
+  .navbar-inverse .navbar-toggle:focus {
+    background-color: #105C31; /* Menu button hover/focus background color */
+    color: #ffffff; /* Menu button hover/focus text color */
+  }
+
+  .navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #000; /* Menu button icon color */
+  }
+
+
+  /* ---------------------------hero section ------------------- */
+ 
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/bgg.webp') center/cover no-repeat;/* Replace with your background image */
+    height: 100vh;
     display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
     align-items: center;
-    /* background-color: white; */
-}
-
-nav img {
-    width: 100px;
-}
-
-.nav-links{
-    flex: 1;
-    text-align: right;
-}
- 
-.nav-links ul li {
-     list-style: none;
-     display: inline-block;
-     padding: 8px 12px;
-     position: relative;
-}
- 
-.nav-links ul li a {
+    justify-content: center;
     color: #fff;
-    text-decoration: none;
-    font-size: 13px;
+    text-align: center;
 }
 
-/* course */
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-weight: 600;
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.hero-content a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 13px 35px;
+    border-radius: 5px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+}
+
+
+  /* ---------------------------course------------------- */
+#coursesdiv{
+    background-color: #F5F4ED;
+}
 #course{
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 20px;
 }
  h1{
  font-size:36px ;
  font-weight: 600;
+ color: #105C31;
 }
 
  p {
@@ -61,6 +120,7 @@ nav img {
     font-weight: 300;
     line-height: 22px;
     padding: 10px ;
+    
 }
  
 .row {
@@ -72,7 +132,7 @@ nav img {
 
 .course-col{
 flex-basis: 31%;
-background-color: #fff3f3;
+background-color: #E2ECE5;
 border-radius: 10px;
 margin-bottom: 5%;
 padding: 20px 12px;
@@ -95,12 +155,16 @@ box-sizing: border-box;
     }
 } 
 
-/* campus */
+/*--------------------------------- campus--------------------------*/
+/* #campusdiv{
+    background-color: #E2ECE5;
+} */
 .campus{
     width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 50px;
+
 
 }
 
@@ -126,7 +190,7 @@ box-sizing: border-box;
 }
 
 .layer:hover{
-    background: rgba(126, 0, 0, 0.7);   
+    background: rgba(0, 40, 0, 0.7);   
 }
 
 .layer h3{
@@ -152,8 +216,7 @@ box-sizing: border-box;
 /* facilities */
 
 .facilities{
-    width: 80%vw;
-    background-color: red;
+    width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 100px ;
@@ -183,25 +246,147 @@ box-sizing: border-box;
   text-align: center;
 }
 
+/* testimonials */
+#testimonialdiv{
+    background-color: #F5F4ED;
+}
+#testimonials{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+.testimonal-col{
+    flex-basis:44% ;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left; 
+    background-color: #E2ECE5;
+    padding: 25px;
+    cursor: pointer;
+    
+}
+.testimonal-col img {
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+    
+}
+
+
+.testimonal-col p {
+    padding: 0;
+
+}
+.testimonal-col h3 {
+    margin-top: 15px;
+    text-align: right;
+}
+
+
+@media (max-width:700px){
+    .testimonal-col img {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}
+
+
+/* contact us box  */
+
+
+#contact-us{
+    margin: auto;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),url("images/backg.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+    
+}
+
+
+#contact-us h3 {
+    color: #fff;
+    margin-bottom: 40px ;
+    padding: 0;
+    font-weight: 300;
+
+}
+
+#contact-us a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 13px 35px;
+    border-radius: 5px;
+}
+
+
+.btn {
+   margin-top: 30px;
+   color: #fff;
+  background-color: #105C31;
+}
+
+.btn:hover{
+   color: #105C31;
+   background-color: #fff;
+}
 
 
 
+@media (max-width:700px){
+    #contact-us h3 {
+       font-size: 24px;
+    
+    }
+}
+
+/* ----------------footer------------ */
+#footer{
+    background-color: #E2ECE5;
+}
+#footer{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 160px 0;
+}
+#footer h4 {
+    color: #105C31;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.icons i {
+    color: darkgreen;
+    margin: 0 13px;
+    font-size: 20px;
+    padding: 18px  0;
+    cursor: pointer;
+}
+
+/* --------------------------------about us page ----------------------------------------------------------------------------------------------------------------------------- */
+
+.abouthero-section{
+    height: 50vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/aboutus.jpg') center/cover no-repeat;
+    text-align: center;
+}
+.hero-content{
+    text-align: center;
+    margin: auto;
 
 
+}
+.hero-content h1{
+  padding-top:100px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* about us contant section  */
